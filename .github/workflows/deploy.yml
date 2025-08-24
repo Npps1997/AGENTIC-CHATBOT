@@ -22,4 +22,4 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: your-dockerhub-username/your-image-name:latest
+        tags: neerajai97/agentic-chatbot:latest
