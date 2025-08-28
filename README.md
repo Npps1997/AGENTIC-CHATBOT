@@ -32,7 +32,7 @@ flowchart TD
     A --> B
     B --> F
     F --> U
-
+```
 ## ⚙️ Tech Stack  
 
 - **Frontend:** Streamlit  
@@ -50,15 +50,18 @@ flowchart TD
 ```bash
 git clone https://github.com/Npps1997/AGENTIC-CHATBOT.git
 cd AGENTIC-CHATBOT
+```
 
 ### 2. Create virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
 
 ### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 ### 4. Setup environment variables
 
@@ -67,17 +70,45 @@ Create a .env file in the project root:
 GROQ_API_KEY=your_groq_key_here
 OPENAI_API_KEY=your_openai_key_here
 TAVILY_API_KEY=your_tavily_key_here
+```
 
 ### 5. Run Backend (FastAPI)
 ```bash
 uvicorn backend:app --reload --host 127.0.0.1 --port 9999
+```
 
 ### 6. Run Frontend (Streamlit)
 ```bash
 streamlit run frontend.py
+```
 
-🐳 Docker Deployment
+## 🐳 Docker Deployment
 
 Build & Run
 ```bash
 docker-compose up --build -d
+```
+
+Access Services
+
+- Streamlit UI: http://<EC2-IP>:8501
+- FastAPI Backend: http://<EC2-IP>:9999
+
+## ☁️ AWS Deployment
+
+- Launch EC2 (Ubuntu 22.04, t2.medium recommended).
+- Install Docker & Docker Compose.
+- Pull repo & deploy with:
+```bash
+docker-compose up --build -d
+```
+- CI/CD via GitHub Actions (.github/workflows/deploy.yaml) for automated deployment.
+
+## 📌 Roadmap / Future Enhancements
+
+- 🔒 Add authentication (JWT/OAuth).
+- 🧠 Integrate vector database (Pinecone/Weaviate) for RAG.
+- 🤖 Multi-agent collaboration.
+- 💾 Persistent DB storage for chat history.
+
+✨ If you like this project, don’t forget to ⭐ star the repo!
