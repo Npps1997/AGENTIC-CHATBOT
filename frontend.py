@@ -32,7 +32,7 @@ if user_input:
     st.session_state["message_history"].append({"role": "user", "content": user_input})
 
     # 2. Compose backend payload & fetch AI reply
-    API_URL = "http://backend:9999/chat"
+    API_URL = "http://3.91.213.59:9999/chat"
     payload = {
         "model_name": selected_model,
         "model_provider": provider,
