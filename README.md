@@ -33,6 +33,7 @@ flowchart TD
     B --> F
     F --> U
 ```
+
 ## ⚙️ Tech Stack  
 
 - **Frontend:** Streamlit  
@@ -112,3 +113,4 @@ docker-compose up --build -d
 - 💾 Persistent DB storage for chat history.
 
 ✨ If you like this project, don’t forget to ⭐ star the repo!
+
